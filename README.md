@@ -233,7 +233,7 @@ postgres=# \q
 $ df -hT | grep xfs
 /dev/loop0 	xfs 	1014M  188M  827M  19% /var/lib/postgresql/data
 ```
-We will create an empty database, just so postgresql creates a folder for it and an entry in pg_database. Then, we will stop the service (and, incidentally, the container), copy the database using **<code>cp --reflink=always</code></strong>, and restart the service. The new database should be a clone of the first one.
+We will create an empty database, just so postgresql creates a folder for it and an entry in pg_database. Then, we will stop the service (and, incidentally, the container), copy the database using <code>cp --reflink=always</code>, and restart the service. The new database should be a clone of the first one.
 ```
 $ psql
 
